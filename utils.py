@@ -62,6 +62,7 @@ def clusterize(data, k):
     transformed = clusterizer.fit_transform(data)
     predicted = clusterizer.predict(data)
 
+    print(f'Clusterized for K = {k}')
     return transformed, predicted
 
 
@@ -103,7 +104,7 @@ def TSNE(data, k, n_components=2, mine=True, metric='euclidean', print_predicted
         plt.figure()
         ax = plt.axes(projection='3d')
 
-        ax.scatter3D(data['x1'], data['x2'], data['x3'], c=data['y'], cmap='CMRmap');
+        ax.scatter3D(data['x1'], data['x2'], data['x3'], c=data['y'], cmap='rocket');
 
     print('My t-SNE:' if mine else 'sklearn t-SNE:')
     plt.show()

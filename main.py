@@ -21,7 +21,7 @@ plt.show()
 
 chosen_k = 7
 
-print(f'Te chosen k is: {chosen_k}')
+print(f'The chosen k is: {chosen_k}')
 
 TSNE(data, chosen_k, n_components=2, mine=False, metric='euclidean', print_predicted=True)
 
